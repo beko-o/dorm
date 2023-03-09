@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Selection</title>
+  <style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px;
+			padding: 10px;
+			background-color: #F0F0F0;
+			border: 2px solid #CCC;
+			border-radius: 5px;
+		}
+		.room {
+			margin: 20px;
+			padding: 10px;
+			background-color: #FFF;
+			border: 2px solid #CCC;
+			border-radius: 5px;
+		}
+		.place {
+			margin: 5px;
+			padding: 5px;
+			background-color: #EEE;
+			border: 1px solid #CCC;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.place.selected {
+			background-color: #007FFF;
+			color: #FFF;
+			border: 1px solid #007FFF;
+		}
+		.submit-button {
+			margin-top: 20px;
+			padding: 10px;
+			background-color: #007FFF;
+			color: #FFF;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+<form method="post" action="{% url 'reserve_place' %}">
+		{% csrf_token %}
+		<div class="container">
+			<div class="room">
+				<h2>Room 601A</h2>
+				<div class="places">
+					<div class="place" data-room="601A" data-place="1">1</div>
+					<div class="place" data-room="601A" data-place="2">2</div>
+					<div class="place" data-room="601A" data-place="3">3</div>
+					<div class="place" data-room="601A" data-place="4">4</div>
+				</div>
+			</div>
+			<div class="room">
+				<h2>Room 601B</h2>
+				<div class="places">
+					<div class="place" data-room="601B" data-place="1">1</div>
+					<div class="place" data-room="601B" data-place="2">2</div>
+					<div class="place" data-room="601B" data-place="3">3</div>
+					<div class="place" data-room="601B" data-place="4">4</div>
+				</div>
+			</div>
+		</div>
+		<center><button class="submit-button" type="submit">Submit</button></center>
+	</form>
+	<script>
+		// Add event listener to each place
+		var places = document.querySelectorAll(".place");
+		places.forEach(function(place) {
+			place.addEventListener("click", function() {
+				// Deselect all places
+				places.forEach(function(place) {
+					place.classList.remove("selected");
+				});
+				// Select the clicked place
+				this.classList.add("selected");
+				// Set the room and place values in the hidden form fields
+				var room = this.getAttribute("data-room");
+				var place = this.getAttribute("data-place");
+				document.querySelector("#id_room").value = room;
+				document.querySelector("#id_place").value = place;
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Registration</title>
+
+    <!-- Icons font CSS-->
+    <link rel="stylesheet" media="all" href="{%static 'vendor/mdi-font/css/material-design-iconic-font.min.css'%}">
+    <link rel="stylesheet" media="all" href="{%static 'vendor/font-awesome-4.7/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" media="all" href="{%static 'vendor/select2/select2.min.css'%}">
+    <link rel="stylesheet" media="all" href="{%static 'vendor/datepicker/daterangepicker.css'%}">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" media="all" href="{%static 'css/main.css'%}" >
+</head>
+
+<body>
+    <div class="page-wrapper p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Форма Регистрации</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" for="name">Ваше имя</label>
+                                    <input class="input--style-4" type="text" id="name" name="name">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" for="surname">Ваша Фамилия</label>
+                                    <input class="input--style-4" type="text" id="surname" name="surname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+
+<!--601A - 4 places-->
+<!--601B - 4 places-->
+<!--602A - 4 places-->
+<!--602B - 6 places-->
+<!--603A - 4 places-->
+<!--603B - 6 places-->
+<!--604A - 4 places-->
+<!--604B - 6 places-->
+<!--605A - 4 places-->
+<!--605B - 6 places-->
+<!--606A - 4 places-->
+<!--606B - 6 places-->
+<!--607A - 4 places-->
+<!--607B - 4 places-->
+<!--609A - 2 places-->
+<!--609B - 4 places-->
+<!--610A - 2 places-->
+<!--610B - 4 places-->
+<!--611A - 2 places-->
+<!--611B - 4 places-->
+<!--612A - 2 places-->
+<!--612B - 4 places-->
+<!--613A - 2 places-->
+<!--613B -  4 places-->
+<!--614A - 2 places-->
+<!--614B - 3 places                                        -->
+<!--                                     <div class="col-2">-->
+<!--                                <div class="input-group">-->
+<!--                                    <label class="label" for="room">Выберите себе комнату</label>-->
+<!--                                    <select id="room" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">-->
+<!--                                     <option value="601A">601A</option>-->
+<!--                                     <option value="601B">601B</option>-->
+<!--                                     <option value="602A">602A</option>-->
+<!--                                     <option value="602B">602B</option>-->
+<!--                                     <option value="603A">603A</option>-->
+<!--                                     <option value="603B">603B</option>-->
+<!--                                     <option value="604A">604A</option>-->
+<!--                                     <option value="604B">604B</option>-->
+<!--                                     <option value="605A">605A</option>-->
+<!--                                     <option value="605B">605B</option>-->
+<!--                                     <option value="606A">606A</option>-->
+<!--                                     <option value="606B">606B</option>-->
+<!--                                     <option value="607A">607A</option>-->
+<!--                                     <option value="607B">607B</option>-->
+<!--                                     <option value="609A">609A</option>-->
+<!--                                     <option value="609B">609B</option>-->
+<!--                                     <option value="610A">610A</option>-->
+<!--                                     <option value="610B">610B</option>-->
+<!--                                     <option value="611A">611A</option>-->
+<!--                                     <option value="611B">611B</option>-->
+<!--                                     <option value="612A">612A</option>-->
+<!--                                     <option value="612B">612B</option>-->
+<!--                                     <option value="613A">613A</option>-->
+<!--                                     <option value="613B">613B</option>-->
+<!--                                     <option value="614A">614A</option>-->
+<!--                                     <option value="614B">614B</option>-->
+
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Ваш пол</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45" >Мужской
+                                            <input type="radio" checked="checked" id="male" name="gender" value="male">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Женский
+                                            <input type="radio" id="female" name="gender" value="female">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" for="email">Email</label>
+                                    <input class="input--style-4" type="email" id="email" name="email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" for="phone_number">Номер телефона</label>
+                                    <input class="input--style-4" type="text" id="phone_number" name="phone_number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" onclick="checkInput()" type="submit" value="Submit">Зарегестрироваться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function checkInput() {
+        const input1 = document.getElementById('name').value;
+        const input2 = document.getElementById('surname').value;
+        const input3 = document.getElementById('email').value;
+        const input4 = document.getElementById('phone_number').value;
+        if (input1 === '') {
+          alert('Надо указать имя');
+          event.preventDefault(); // Prevent the form from submitting
+        }
+        elif (input2 === '') {
+          alert('Надо указать фамилию');
+          event.preventDefault(); // Prevent the form from submitting
+        }
+        elif (input3 === '') {
+          alert('Надо указать почту');
+          event.preventDefault(); // Prevent the form from submitting
+        }
+        elif (input4 === '') {
+          alert('Надо указать номер телефона');
+          event.preventDefault(); // Prevent the form from submitting
+        }
+      }
+
+    </script>
+    <script src="static/js/global.js"></script>
+    {%block script%}
+     <!-- Jquery JS-->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+   <!-- Vendor JS-->
+    <script src="{% static 'vendor/select2/select2.min.js'%}"></script>
+    <script src="{% static 'vendor/datepicker/moment.min.js'%}"></script>
+    <script src="{% static 'vendor/datepicker/daterangepicker.js'%}"></script>
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js'%}"></script>
+    {%endblock%}
+</body>
+
+</html>
+<!-- end document-->
