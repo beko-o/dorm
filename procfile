@@ -1,1 +1,1 @@
-web: gunicorn jihc_site2.wsgi --log-file -
+web: gunicorn dorm.wsgi --log-file -
